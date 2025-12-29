@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charles | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!-- Header / Navigation -->
+<header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="#">Charles</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#achievements-Badges">Achievements & Badges</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Hi, I’m Charles</h1>
+        <p>First Year Student, BS-INFORMATION TECHONOLOGY in LSPU SPCC</p>
+        <a class="btn" href="#achievements-Badges">View my achievements & badges</a>
+      </div>
+      <div class="hero-image">
+        <img src="pic.jpg" alt="Charles profile photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About me</h2>
+      <p>
+        I'm an it student focused on programming and web design/development. I am is passionate about learning new technologies and creating beginner friendly
+        that help others and understand IT concepts. With growing skills in C#, python, and responsive design, I am  aiming to apply this knowledge to realworld projects and community learning initiatives.
+      </p>
+    </div>
+  </section>
+
+  <!-- Achievements section -->
+  <section id="achievements-Badges" class="section">
+  <div class="container">
+    <h2>Achievements & Badges</h2>
+
+      <div class="achievements-Badges-grid">
+        <article class="card">
+          <img src="python.png" alt="Achievement 1 thumbnail" />
+          <div class="card-content">
+            <h3>NC-II</h3>
+            <p>MY FIRST ACHIEVEMENT IN ICT</p>
+            <a class="link" href="python.png" target="_blank" rel="noopener">View details</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="python.png" alt="Achievement 2 thumbnail" />
+          <div class="card-content">
+            <h3>PYTHON ESSENTIAL CERTIFICATE</h3>
+            <p>MY FIRST BADGES AS A FIRST YEAR STUDENT IN LSPU SPCC</p>
+            <a class="link" href="python.png" target="_blank" rel="noopener">View details</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><span>C#</span></li>
+        <li><span>Python</span></li>
+        <li><span>HTML & CSS</span></li>
+        <li><span>ASSEMBLY AND DISASSEMBLY OF COMPUTER</span></li>
+      </ul>
+    </div>
+  </section>
+
+<!-- Contact section -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      Want to collaborate or learn together? Send me a message.
+    </p>
+
+    <form class="contact-form" action="https://formspree.io/f/xlgepvjp" method="POST">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="your@email.com" required />
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-content">
+    <p>© 2025 Charles • San Pablo, Laguna</p>
+    <div class="social">
+      <a href="https://github.com/charlesortega985-crypto" target="_blank" aria-label="Github">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.facebook.com/cj.ortega.549" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=charlesortega985@gmail.com" target="_blank" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</footer>

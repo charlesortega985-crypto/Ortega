@@ -1,0 +1,200 @@
+/* Base styles */
+:root {
+  --bg: #0f172a;          /* dark slate */
+  --text: #e5e7eb;        /* light gray */
+  --muted: #94a3b8;       /* slate */
+  --primary: #38bdf8;     /* sky */
+  --accent: #22c55e;      /* green */
+  --card: #111827;        /* near black */
+  --border: #1f2937;      /* dark gray */
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.container {
+  width: 95%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Header / Navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.header-content {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 0;
+}
+.logo {
+  color: var(--text);
+  font-weight: 700; text-decoration: none; letter-spacing: 0.5px;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover, .nav a:focus {
+  color: var(--text);
+  border-bottom-color: var(--primary);
+}
+
+/* Hero */
+.hero {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+}
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-text h1 {
+  font-size: 2.2rem; margin: 0 0 0.5rem;
+}
+.hero-text p {
+  color: var(--muted); margin: 0 0 1rem;
+}
+.hero-image img {
+  width: 100%; max-width: 280px; border-radius: 12px; border: 1px solid var(--border);
+  display: block; margin-left: auto;
+}
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #0b1220;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover { filter: brightness(1.1); }
+
+/* Sections */
+.section { padding: 2.5rem 0; }
+.section h2 { margin: 0 0 1rem; font-size: 1.6rem; }
+.section p { color: var(--text); }
+.note { color: var(--muted); font-style: italic; }
+
+/* Achievements grid */
+.achievements-Badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two items side by side */
+  gap: 1.25rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.card img { width: 100%; height: 160px; object-fit: cover; }
+.card-content { padding: 1rem; }
+.card-content h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.card-content p { color: var(--muted); margin: 0 0 0.75rem; }
+.link {
+  color: var(--primary); text-decoration: none; font-weight: 600;
+}
+.link:hover { text-decoration: underline; }
+
+/* Skills list */
+.skills-list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+}
+.skills-list li {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* Contact form */
+.contact-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 680px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  background: #0b1220; /* dark background for inputs */
+  color: var(--text);  /* text color from theme */
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem;
+  font-family: inherit; /* inherit font from parent */
+  font-size: 1rem;      /* consistent readable size */
+  line-height: 1.4;     /* better spacing for text */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent); /* highlight border on focus */
+  box-shadow: 0 0 0 2px rgba(100, 150, 250, 0.3); /* subtle glow */
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+.footer-content {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-content p { margin: 0; color: var(--muted); }
+.social a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 1.5rem;   /* icon size */
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: var(--primary); /* highlight on hover */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-image img { margin: 0; max-width: 220px; }
+  .achievement-grid { grid-template-columns: 1fr; } /* stack achievements */
+}
+@media (max-width: 560px) {
+  .achievement-grid { grid-template-columns: 1fr; }
+  .nav { display: none; } /* keep it simple; hide nav on very small screens */
+}
